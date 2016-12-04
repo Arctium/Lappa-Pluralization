@@ -23,12 +23,12 @@ namespace LappaPluralization
             if (settings.Exceptions.Contains(word))
                 return word;
 
-            var irregularNoun = settings.IrregularWords.SingleOrDefault(s => word.EndsWith(s.Key, StringComparison.InvariantCultureIgnoreCase));
+            var irregularNoun = settings.IrregularWords.SingleOrDefault(s => word.EndsWith(s.Key, StringComparison.CurrentCultureIgnoreCase));
 
             if (irregularNoun.Key != null)
                 return word.Remove(word.Length - irregularNoun.Key.Length, irregularNoun.Key.Length) + word[word.Length - irregularNoun.Key.Length] + irregularNoun.Value.Substring(1);
 
-            if (settings.NonChangingWords.Any(s => word.EndsWith(s, StringComparison.InvariantCultureIgnoreCase)))
+            if (settings.NonChangingWords.Any(s => word.EndsWith(s, StringComparison.CurrentCultureIgnoreCase)))
                 return word;
 
             if (Regex.IsMatch(word, @"\d$"))
@@ -38,7 +38,7 @@ namespace LappaPluralization
             {
                 var wordPreEndChar = word[word.Length - 2];
 
-                if (word.EndsWith("y", StringComparison.InvariantCultureIgnoreCase))
+                if (word.EndsWith("y", StringComparison.CurrentCultureIgnoreCase))
                 {
                     if (wordPreEndChar == 'a' || wordPreEndChar == 'e' || wordPreEndChar == 'i' || wordPreEndChar == 'o' || wordPreEndChar == 'u')
                         return word + "ies";
@@ -46,7 +46,7 @@ namespace LappaPluralization
                     return word.Remove(word.Length - 1, 1) + "ies";
                 }
 
-                if (word.EndsWith("o", StringComparison.InvariantCultureIgnoreCase))
+                if (word.EndsWith("o", StringComparison.CurrentCultureIgnoreCase))
                 {
                     if (wordPreEndChar == 'a' || wordPreEndChar == 'e' || wordPreEndChar == 'i' || wordPreEndChar == 'o' || wordPreEndChar == 'u')
                         return word + "oes";
@@ -55,11 +55,11 @@ namespace LappaPluralization
                 }
             }
 
-            if (word.EndsWith("ies", StringComparison.InvariantCultureIgnoreCase))
+            if (word.EndsWith("ies", StringComparison.CurrentCultureIgnoreCase))
                 return word;
 
-            if (word.EndsWith("s", StringComparison.InvariantCultureIgnoreCase) || word.EndsWith("x", StringComparison.InvariantCultureIgnoreCase) || 
-                word.EndsWith("ch", StringComparison.InvariantCultureIgnoreCase) || word.EndsWith("sh", StringComparison.InvariantCultureIgnoreCase))
+            if (word.EndsWith("s", StringComparison.CurrentCultureIgnoreCase) || word.EndsWith("x", StringComparison.CurrentCultureIgnoreCase) ||
+                word.EndsWith("ch", StringComparison.CurrentCultureIgnoreCase) || word.EndsWith("sh", StringComparison.CurrentCultureIgnoreCase))
                 return word + "es";
 
             return word + "s";
