@@ -7,9 +7,9 @@ namespace LappaPluralization
 {
     class PluralizationSettings
     {
-        public List<string> Exceptions => new List<string>();
+        public List<string> Exceptions { get; } = new List<string>();
 
-        public Dictionary<string, string> IrregularWords => new Dictionary<string, string>()
+        public Dictionary<string, string> IrregularWords { get; } = new Dictionary<string, string>()
         {
             // -is
             ["axis"] = "axes", ["analysis"] = "analyses", ["basis"] = "bases",
@@ -22,7 +22,7 @@ namespace LappaPluralization
             ["woman"] = "women", ["person"] = "persons",
         };
 
-        public List<string> NonChangingWords => new List<string>()
+        public List<string> NonChangingWords { get; } = new List<string>()
         {
             "aircraft", "deer", "fish", "moose", "offspring",
             "sheep", "species", "salmon", "trout", "data", "info",

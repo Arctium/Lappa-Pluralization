@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.6</TargetFramework>
+    <Authors>Arctium Software</Authors>
+    <Company>Arctium Software</Company>
+    <Copyright>Copyright 2015-2017 Arctium Software &lt;https://www.arctium-software.com&gt;</Copyright>
+    <PackageProjectUrl>https://arctium-software.com</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Arctium-Software/LappaPluralization</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageIconUrl></PackageIconUrl>
+    <PackageTags>plural, pluralization, netcore</PackageTags>
+    <PackageReleaseNotes>MSBuild migration &amp; First Nuget release.
+</PackageReleaseNotes>
+    <Description>Pluralization library.
+Current limitations: English noun support only.</Description>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <Product>LappaPluralization</Product>
+    <AssemblyName>LappaPluralization</AssemblyName>
+    <RootNamespace>LappaPluralization</RootNamespace>
+  </PropertyGroup>
+
+</Project>
