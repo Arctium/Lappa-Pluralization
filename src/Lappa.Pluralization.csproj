@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.6</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>Arctium Software</Authors>
     <Company>Arctium Software</Company>
     <Copyright>Copyright 2015-2017 Arctium Software &lt;https://www.arctium-software.com&gt;</Copyright>
@@ -18,8 +18,8 @@ Current limitations: English noun support only.</Description>
     <FileVersion>1.0.0.0</FileVersion>
     <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
     <Product>LappaPluralization</Product>
-    <AssemblyName>LappaPluralization</AssemblyName>
-    <RootNamespace>LappaPluralization</RootNamespace>
+    <AssemblyName>Lappa.Pluralization</AssemblyName>
+    <RootNamespace>Lappa.Pluralization</RootNamespace>
   </PropertyGroup>
 
 </Project>

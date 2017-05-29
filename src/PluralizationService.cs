@@ -5,7 +5,7 @@ using System;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace LappaPluralization
+namespace Lappa.Pluralization
 {
     // Basic pluralization class. Needs to be extended with more exceptions.
     // English nouns supported only.
