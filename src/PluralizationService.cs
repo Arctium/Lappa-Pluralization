@@ -1,4 +1,4 @@
-﻿// Copyright (C) Arctium Software.
+﻿// Copyright (C) Arctium.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
@@ -11,7 +11,7 @@ namespace Lappa.Pluralization
     // English nouns supported only.
     public class PluralizationService
     {
-        PluralizationSettings settings;
+        readonly PluralizationSettings settings;
 
         public PluralizationService()
         {
@@ -26,7 +26,7 @@ namespace Lappa.Pluralization
             var irregularNoun = settings.IrregularWords.SingleOrDefault(s => word.EndsWith(s.Key, StringComparison.CurrentCultureIgnoreCase));
 
             if (irregularNoun.Key != null)
-                return word.Remove(word.Length - irregularNoun.Key.Length, irregularNoun.Key.Length) + word[word.Length - irregularNoun.Key.Length] + irregularNoun.Value.Substring(1);
+                return word.Remove(word.Length - irregularNoun.Key.Length, irregularNoun.Key.Length) + word[^irregularNoun.Key.Length] + irregularNoun.Value.Substring(1);
 
             if (settings.NonChangingWords.Any(s => word.EndsWith(s, StringComparison.CurrentCultureIgnoreCase)))
                 return word;
@@ -36,7 +36,7 @@ namespace Lappa.Pluralization
 
             if (word.Length >= 2)
             {
-                var wordPreEndChar = word[word.Length - 2];
+                var wordPreEndChar = word[^2];
 
                 if (word.EndsWith("y", StringComparison.CurrentCultureIgnoreCase))
                 {

@@ -1,25 +1,30 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
-    <Authors>Arctium Software</Authors>
-    <Company>Arctium Software</Company>
-    <Copyright>Copyright 2015-2017 Arctium Software &lt;https://www.arctium-software.com&gt;</Copyright>
-    <PackageProjectUrl>https://arctium-software.com</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/Arctium-Software/LappaPluralization</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageIconUrl></PackageIconUrl>
-    <PackageTags>plural, pluralization, netcore</PackageTags>
-    <PackageReleaseNotes>MSBuild migration &amp; First Nuget release.
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <Authors>Arctium</Authors>
+        <Company>Arctium</Company>
+        <Copyright>Copyright 2015-2019 Arctium &lt;https://www.arctium.io&gt;</Copyright>
+        <PackageProjectUrl>https://arctium.io</PackageProjectUrl>
+        <RepositoryUrl>https://gitlab.com/Arctium/Lappa/Pluralization</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageIconUrl></PackageIconUrl>
+        <PackageTags>plural, pluralization, netcore, arctium, english</PackageTags>
+        <PackageReleaseNotes>Misc fixes.
 </PackageReleaseNotes>
-    <Description>Pluralization library.
-Current limitations: English noun support only.</Description>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
-    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
-    <Product>LappaPluralization</Product>
-    <AssemblyName>Lappa.Pluralization</AssemblyName>
-    <RootNamespace>Lappa.Pluralization</RootNamespace>
-  </PropertyGroup>
+        <Description>Simple Pluralization library.
+
+Current limitations: English noun support only.
+</Description>
+        <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <FileVersion>1.0.1.0</FileVersion>
+        <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+        <Product>Lappa Pluralization</Product>
+        <AssemblyName>Lappa.Pluralization</AssemblyName>
+        <RootNamespace>Lappa.Pluralization</RootNamespace>
+        <Platforms>x64</Platforms>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Version>1.0.1</Version>
+    </PropertyGroup>
 
 </Project>
