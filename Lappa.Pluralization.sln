@@ -1,24 +1,44 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29209.152
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32317.152
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lappa.Pluralization", "src\Lappa.Pluralization.csproj", "{2EBECD3B-4822-4C25-8732-C13171D89808}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lappa.Pluralization.Tests", "tests\src\Lappa.Pluralization.Tests\Lappa.Pluralization.Tests\Lappa.Pluralization.Tests.csproj", "{BB492F65-B312-4172-8705-B00B3DE65AAC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2EBECD3B-4822-4C25-8732-C13171D89808}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{2EBECD3B-4822-4C25-8732-C13171D89808}.Debug|Any CPU.Build.0 = Debug|x64
 		{2EBECD3B-4822-4C25-8732-C13171D89808}.Debug|x64.ActiveCfg = Debug|x64
 		{2EBECD3B-4822-4C25-8732-C13171D89808}.Debug|x64.Build.0 = Debug|x64
 		{2EBECD3B-4822-4C25-8732-C13171D89808}.Debug|x86.ActiveCfg = Debug|x64
+		{2EBECD3B-4822-4C25-8732-C13171D89808}.Release|Any CPU.ActiveCfg = Release|x64
+		{2EBECD3B-4822-4C25-8732-C13171D89808}.Release|Any CPU.Build.0 = Release|x64
 		{2EBECD3B-4822-4C25-8732-C13171D89808}.Release|x64.ActiveCfg = Release|x64
 		{2EBECD3B-4822-4C25-8732-C13171D89808}.Release|x64.Build.0 = Release|x64
 		{2EBECD3B-4822-4C25-8732-C13171D89808}.Release|x86.ActiveCfg = Release|x64
+		{BB492F65-B312-4172-8705-B00B3DE65AAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB492F65-B312-4172-8705-B00B3DE65AAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB492F65-B312-4172-8705-B00B3DE65AAC}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BB492F65-B312-4172-8705-B00B3DE65AAC}.Debug|x64.Build.0 = Debug|Any CPU
+		{BB492F65-B312-4172-8705-B00B3DE65AAC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BB492F65-B312-4172-8705-B00B3DE65AAC}.Debug|x86.Build.0 = Debug|Any CPU
+		{BB492F65-B312-4172-8705-B00B3DE65AAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB492F65-B312-4172-8705-B00B3DE65AAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB492F65-B312-4172-8705-B00B3DE65AAC}.Release|x64.ActiveCfg = Release|Any CPU
+		{BB492F65-B312-4172-8705-B00B3DE65AAC}.Release|x64.Build.0 = Release|Any CPU
+		{BB492F65-B312-4172-8705-B00B3DE65AAC}.Release|x86.ActiveCfg = Release|Any CPU
+		{BB492F65-B312-4172-8705-B00B3DE65AAC}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

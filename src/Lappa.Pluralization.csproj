@@ -11,15 +11,15 @@
         <PackageIconUrl></PackageIconUrl>
         <PackageTags>plural, pluralization, netcore, arctium, english</PackageTags>
         <PackageReleaseNotes>Updated required framework to .NET 6.0</PackageReleaseNotes>
-        <Description>Simple Pluralization library.
-            Current limitations: English noun support only.
-        </Description>
+        <Description>Fixed nouns ending with y.</Description>
         <Product>Lappa Pluralization</Product>
         <AssemblyName>Lappa.Pluralization</AssemblyName>
         <RootNamespace>Lappa.Pluralization</RootNamespace>
         <Platforms>x64</Platforms>
         <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
         <RepositoryUrl>https://github.com/Arctium/Lappa-Pluralization</RepositoryUrl>
+        <Version>1.1.1</Version>
+        <PlatformTarget>AnyCPU</PlatformTarget>
     </PropertyGroup>
 
     <ItemGroup>

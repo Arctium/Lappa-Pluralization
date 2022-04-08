@@ -1,5 +1,5 @@
-﻿// Licensed to Arctium under one or more agreements.
-// Arctium licenses this file to you under the MIT license.
+﻿// Copyright (c) Arctium.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 namespace Lappa.Pluralization;
 

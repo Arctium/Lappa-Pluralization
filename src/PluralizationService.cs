@@ -1,5 +1,5 @@
-﻿// Licensed to Arctium under one or more agreements.
-// Arctium licenses this file to you under the MIT license.
+﻿// Copyright (c) Arctium.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 namespace Lappa.Pluralization;
 
@@ -45,7 +45,7 @@ public class PluralizationService
             var isVocal = wordSpan[^2] is 'a' or 'e' or 'i' or 'o' or 'u';
 
             if (wordSpan.EndsWith("y"))
-                return string.Concat(isVocal ? wordSpan : word.AsSpan()[^1..], "ies".AsSpan());
+                return string.Concat(isVocal ? wordSpan : wordSpan[..^1], "ies".AsSpan());
 
             if (wordSpan.EndsWith("o"))
                 return string.Concat(wordSpan, isVocal ? "oes".AsSpan() : sSpan);
