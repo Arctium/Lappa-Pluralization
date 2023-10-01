@@ -12,7 +12,8 @@ public class UnitTest1
     [Fact]
     public void EndsWithYTest()
     {
-        var pluralized = _service.Pluralize("Summary");
-        Assert.Equal("Summaries", pluralized);
+        Assert.Equal("Summaries", _service.Pluralize("Summary"));
+        Assert.Equal("Data", _service.Pluralize("Data"));
+        Assert.Equal("Information", _service.Pluralize("Information"));
     }
 }

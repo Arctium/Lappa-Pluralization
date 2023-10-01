@@ -22,16 +22,18 @@ public class PluralizationService
         if (_settings.Exceptions.Contains(word))
             return word;
 
-        var irregularNoun = _settings.IrregularWords.SingleOrDefault(s => word.AsSpan().EndsWith(s.Key));
+        var irregularNoun = _settings.IrregularWords.SingleOrDefault(s => word.AsSpan().EndsWith(s.Key, StringComparison.OrdinalIgnoreCase));
 
         if (irregularNoun.Key != null)
         {
             var irregularNounIndex = word.Length - irregularNoun.Key.Length;
 
-            return string.Concat(word.AsSpan(irregularNounIndex, irregularNoun.Key.Length), word.AsSpan(irregularNounIndex, 1), irregularNoun.Value.AsSpan(1));
+            return string.Concat(word.AsSpan(irregularNounIndex, irregularNoun.Key.Length), 
+                                 word.AsSpan(irregularNounIndex, 1), 
+                                 irregularNoun.Value.AsSpan(1));
         }
 
-        if (_settings.NonChangingWords.Any(s => word.AsSpan().EndsWith(s)))
+        if (_settings.NonChangingWords.Any(s => word.AsSpan().EndsWith(s, StringComparison.OrdinalIgnoreCase)))
             return word;
 
         if (char.IsDigit(word.AsSpan()[^1..][0]))
@@ -45,18 +47,18 @@ public class PluralizationService
             var isVocal = wordSpan[^2] is 'a' or 'e' or 'i' or 'o' or 'u';
 
             if (wordSpan.EndsWith("y"))
-                return string.Concat(isVocal ? wordSpan : wordSpan[..^1], "ies".AsSpan());
+                return string.Concat(isVocal ? wordSpan : wordSpan[..^1], [.. "ies"]);
 
             if (wordSpan.EndsWith("o"))
-                return string.Concat(wordSpan, isVocal ? "oes".AsSpan() : sSpan);
+                return string.Concat(wordSpan, isVocal ? [.. "oes"] : sSpan);
         }
 
         if (wordSpan.EndsWith("ies"))
             return word;
 
         if (wordSpan.EndsWith(sSpan) || wordSpan.EndsWith("x") || wordSpan.EndsWith("ch") || wordSpan.EndsWith("sh"))
-            return string.Concat(wordSpan, "es".AsSpan());
-
+            return string.Concat(wordSpan, [.. "es"]);
+        
         return string.Concat(wordSpan, sSpan);
     }
 

@@ -11,5 +11,5 @@ Please see our Open Source project [Documentation Repo](https://github.com/Arcti
 Currently there are only english nouns supported.
 
 ### Build Prerequisites
-* [.NET Core SDK 6.0.0 or later](https://dotnet.microsoft.com/download/dotnet/6.0)
+* [.NET Core SDK 8.0.0 or later](https://dotnet.microsoft.com/download/dotnet/8.0)
 * Optional for native builds: C++ workload through Visual Studio 2022 or latest C++ build tools
